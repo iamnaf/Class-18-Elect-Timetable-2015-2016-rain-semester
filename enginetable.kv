@@ -1,0 +1,132 @@
+<HomeScreen>:
+	Widget:
+		pos: self.pos
+		size: self.size 
+		on_touch_down: root.manager.current='depts'
+		Label:
+			text: "Welcome to The Engineering TimeTable Application"
+			pos: self.pos
+			font_size: 32
+		
+			
+			
+<DepartmentsScreen>:
+	GridLayout:
+		rows: 11
+		padding: 100,100
+		spacing: 10,10
+		Button:
+			text: 'Agriculture and Biosystems Engineering'
+			#text_size: self.size
+			on_release: root.manager.current = 'levels'
+		Button:
+			text: "Biomedical Engineering"
+			#text_size: self.size
+			on_release: root.manager.current = 'levels'
+		Button:
+			text: "Chemical Engineering"
+			#text_size: self.size
+			on_release: root.manager.current = 'levels'
+		Button:
+			text: "Civil Engineering"
+			#text_size: self.size
+			on_release: root.manager.current = 'levels'
+		Button:
+			text: "Computer Engineering"
+			#text_size: self.size
+			on_release: root.manager.current = 'levels'
+		Button: 
+			text: "Food and Bioprocessing Engineering"
+			#text_size: self.size
+			on_release: root.manager.current = 'levels'
+		Button:
+			text: "Electrical Engineering"
+			#text_size: self.size
+			on_release: root.manager.current = 'levels'
+		Button:
+			text: "Material and Metallurgical Engineering"
+			#text_size: self.size
+			on_release: root.manager.current = 'levels'
+		Button:
+			text: "Mechanical Engineering"
+			#text_size: self.size
+			on_release: root.manager.current = 'levels'
+		Button:
+			text: "Water Resources and Environmental Engineering"
+			#text_size: self.size
+			on_release: root.manager.current = 'levels'
+		Button:
+			text: "Main Menu"
+			#text_size: self.size
+			on_release: root.manager.current='main'
+<Levels>:
+	GridLayout:
+		rows: 6
+		padding: 70,70
+		spacing: 20,20
+		Button: 
+			text: "100 Level"
+			#text_size: self.size
+			on_release: root.manager.current='days'
+		Button: 
+			text: "200 Level"
+			#text_size: self.size
+			on_release: root.manager.current='days'
+		Button:
+			text: "300 Level"
+			#text_size: self.size
+			on_release: root.manager.current='days'
+		Button:
+			text: "400 Level"
+			#text_size: self.size
+			on_release: root.manager.current='days'
+		Button:
+			text: "500 Level"
+			#text_size: self.size
+			on_release: root.manager.current='days'
+		GridLayout:
+			cols: 2
+			Button:
+				text: "Main Menu"
+				#text_size: self.size
+				on_release: root.manager.current='main'
+			Button:
+				text: "Back"
+				#text_size: self.size
+				on_release: root.manager.current='depts'
+				
+<Days>:
+	GridLayout:
+		rows: 6
+		padding: 70,70
+		spacing: 20,20
+		Button:
+			text: "MONDAY"
+			on_release: root.manager.current='schedule'
+		Button:
+			text: "TUESDAY"
+			on_release: root.manager.current='schedule'
+		Button:
+			text: "WEDNESDAY"
+			on_release: root.manager.current='schedule'
+		Button:
+			text: "THURSDAY"
+			on_release: root.manager.current='schedule'
+		Button:
+			text: "FRIDAY"
+			on_release: root.manager.current='schedule'
+		GridLayout:
+			cols: 2
+			Button:
+				text: "Main Menu"
+				on_release: root.manager.current='main'
+			Button: 
+				text: "Back"
+				on_release: root.manager.current='levels'
+				
+<DaySchedule>:
+	GridLayout:
+		rows: 6
+		cols: 8
+		on_touch_down: root.manager.current='days'
+	
